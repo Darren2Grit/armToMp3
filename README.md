@@ -8,17 +8,6 @@
 
 因为是基于 JAVE 项目的修改，而 JAVE 是依赖 [ffmpeg](http://ffmpeg.org/) 所以可以适用于所有 ffmpeg 所支持的文件格式的转换。具体可以查看 [JAVE 官方文档](http://www.sauronsoftware.it/projects/jave/manual.php)
 
-# 使用示例
-
-## 引入 maven 依赖
-
-```xml
- <dependency>
-    <groupId>com.github.dadiyang</groupId>
-    <artifactId>jave</artifactId>
-    <version>1.0.2</version>
- </dependency>
-```
 
 ## 调用 AudioUtils.amrToMp3 方法
 ```java
@@ -47,7 +36,6 @@ ffmpeg 是依赖运行环境的，JAVE 项目封装了ffmpeg，它通过上述�
 
 本项目为解决上述问题而生。
 
-* 这是一个maven项目，而且已发布到[中央仓库](https://mvnrepository.com/artifact/com.github.dadiyang/jave)。
 * 项目依赖的 ffmpeg 可执行文件经过验证可以使用（单元测试中提供了一个简单的检验方法）
 * 解决了amr转mp3出现的 EncoderException: Stream mapping 
 * 支持 Linux/Windows/Mac 平台
@@ -62,14 +50,8 @@ ffmpeg 是依赖运行环境的，JAVE 项目封装了ffmpeg，它通过上述�
  
 # 参考
 
+本工具修改了 https://github.com/dadiyang的源码，在windows上不能成功运行的bug
 本工具使用 [JAVE](http://www.sauronsoftware.it/projects/jave/download.php) 源码改造而来
 
-借鉴 [xiaoymin](https://github.com/xiaoymin/jave) 的代码
 
-参考 [解決linux AMR轉MP3出現轉碼成功卻無法播放的問題](https://hk.saowen.com/a/2ec2a73ec73091967c3ebdb5697832006cb255a7183377b6e8fae1c13f5e54bc)
 
-# LICENSE
-
-JAVE 项目是基于 GPL 协议的开源项目，本项目是在 JAVE 的基础上进行修改和增强，因此也采用 GPL 协议开源。
-
-> [JAVE]((http://www.sauronsoftware.it/projects/jave/)) is Free Software and it is licensed under GPL.
